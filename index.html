@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Firecrawl MCP API</title>
+  <style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; max-width: 800px; margin: 0 auto; padding: 2rem; background: #f9f9f9; }
+    h1 { color: #2c3e50; }
+    code, pre { background: #eef; padding: 0.5rem; display: block; border-left: 4px solid #36c; white-space: pre-wrap; word-break: break-word; }
+    ul { padding-left: 1.5rem; }
+    a { color: #007BFF; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .section { margin-bottom: 2rem; }
+  </style>
+</head>
+<body>
+  <h1>🧠 Firecrawl MCP API</h1>
+  <p>Your simple, fast, and free API to extract meaningful content from any public webpage.</p>
+
+  <div class="section">
+    <h2>🔑 Public API Keys</h2>
+    <ul>
+      <li><code>firecrawl-mcp</code></li>
+      <li><code>f98caacb793b9d6df2e62062fbeab34ec8eae2323643a152</code></li>
+      <li><code>user1-3bfa840ff924b874b98a94d2</code></li>
+      <li><code>testkey-001</code></li>
+      <li><code>testkey-002</code></li>
+      <li><code>public-key-demo1</code></li>
+      <li><code>public-key-demo2</code></li>
+      <li><code>firecrawl-trial-access</code></li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h2>🚀 How to Use</h2>
+    <p>Send a POST request to <code>/extract</code> with the following:</p>
+    <pre>{
+  URL: https://firecrawl-mcp-lk7q.onrender.com/extract
+  Method: POST
+  Headers:
+    Content-Type: application/json
+    x-api-key: firecrawl-mcp
+  Body:
+    {
+      "url": "https://en.wikipedia.org/wiki/OpenAI"
+    }
+}</pre>
+  </div>
+
+  <div class="section">
+    <h2>📥 Example API Request and Response</h2>
+    <pre><strong>Terminal Request (curl):</strong>
+curl -X POST https://firecrawl-mcp-lk7q.onrender.com/extract \
+  -H "Content-Type: application/json" \
+  -H "x-api-key: firecrawl-mcp" \
+  -d '{
+    "url": "https://en.wikipedia.org/wiki/OpenAI"
+}'
+
+<strong>Example Response:</strong>
+{
+  "title": "OpenAI - Wikipedia",
+  "content": "OpenAI is an AI research lab...",
+  "images": ["https://upload.wikimedia.org/openai-logo.png"],
+  "published_at": "2025-05-29T12:00:00Z"
+}</pre>
+  </div>
+
+  <div class="section">
+    <h2>📊 View Usage Statistics</h2>
+    <p><a href="/stats">Check current API usage here</a>.</p>
+  </div>
+
+  <div class="section">
+    <h2>📩 Need a Custom API Key?</h2>
+    <p><a href="/request-key">Request your personal API key here</a>.</p>
+  </div>
+
+  <footer>
+    <p>Made with ❤️ by Firecrawl MCP • Hosted on Render</p>
+  </footer>
+</body>
+</html>
